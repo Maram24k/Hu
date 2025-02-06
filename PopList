@@ -1,4 +1,25 @@
-print("hello world");
-Welcome girls
-print("POP LIST is launching!")
-print("queen amwaj");
+//print("hello world");
+//Welcome girls
+//print("POP LIST is launching!")
+//print("queen amwaj");
+//------------------------------------------------------------------------------------------------------
+
+//(1st step) Register out Flutter App in Firebase, by adding the package name.
+
+//(2nd step) Add Firebase SDK to Your Flutter App, by Opening pubspec.yaml and adding dependencies.
+
+//(3rd step) to initialize firebase to flutter 
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  try {
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+    print('✅ Firebase initialized successfully!');
+  } catch (e) {
+    print('❌ Firebase initialization failed: $e');
+  }
+  runApp(MyApp());
+}
+
+//(4th step) يبدا الشغل الصح ..coding yay ,also importing the needed stuuf such authentication, etc...
