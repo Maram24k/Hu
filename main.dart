@@ -1,6 +1,7 @@
 //home page هذا كود خاص بصفحة ادخال المهام 
+
 import 'package:flutter/material.dart';
-import 'task.dart'; // تأكد أن الملف موجود
+import 'task.dart'; 
 import 'profile_screen.dart';
 import 'settings_screen.dart';
 
@@ -342,7 +343,7 @@ class _TaskEntryScreenState extends State<TaskEntryScreen> {
               child: ElevatedButton(
                 onPressed: _addTaskAndNavigate,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.orange,
+                  backgroundColor: Colors.amber[600],
                   foregroundColor: Colors.white,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
                 ),
@@ -356,7 +357,7 @@ class _TaskEntryScreenState extends State<TaskEntryScreen> {
         currentIndex: _currentIndex,
         onTap: _onTabTapped,
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.amber[700]!.withOpacity(0.95),
+        backgroundColor: Colors.amber[600]!.withOpacity(0.95),
         selectedItemColor: Colors.blue[900],
         unselectedItemColor: Colors.white,
         selectedFontSize: 14,
@@ -399,4 +400,4 @@ class _TaskEntryScreenState extends State<TaskEntryScreen> {
       ],
     );
   }
-}
+}     
