@@ -1,7 +1,6 @@
 //home page هذا كود خاص بصفحة ادخال المهام 
-
 import 'package:flutter/material.dart';
-import 'task.dart'; 
+import 'task.dart'; // تأكد أن الملف موجود
 import 'profile_screen.dart';
 import 'settings_screen.dart';
 
@@ -212,10 +211,7 @@ class _TaskEntryScreenState extends State<TaskEntryScreen> {
                 ),
               ],
             ),
-            content: const Text(
-              'هل تريد المتابعة إلى قائمة المهام أم البقاء هنا؟',
-              textAlign: TextAlign.right,
-            ),
+
             actions: [
               TextButton(
                 child: const Text('تراجع'),
@@ -224,8 +220,12 @@ class _TaskEntryScreenState extends State<TaskEntryScreen> {
                 },
               ),
               ElevatedButton(
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.orange),
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.amber[700]),
                 child: const Text('استمرار'),
+
+
+
+
                 onPressed: () {
                   Navigator.of(context).pop();
                   Navigator.pushReplacement(
@@ -343,7 +343,7 @@ class _TaskEntryScreenState extends State<TaskEntryScreen> {
               child: ElevatedButton(
                 onPressed: _addTaskAndNavigate,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.amber[600],
+                  backgroundColor: Colors.amber[700],
                   foregroundColor: Colors.white,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
                 ),
@@ -357,7 +357,7 @@ class _TaskEntryScreenState extends State<TaskEntryScreen> {
         currentIndex: _currentIndex,
         onTap: _onTabTapped,
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.amber[600]!.withOpacity(0.95),
+        backgroundColor: Colors.amber[700]!.withOpacity(0.95),
         selectedItemColor: Colors.blue[900],
         unselectedItemColor: Colors.white,
         selectedFontSize: 14,
@@ -400,4 +400,4 @@ class _TaskEntryScreenState extends State<TaskEntryScreen> {
       ],
     );
   }
-}     
+}
